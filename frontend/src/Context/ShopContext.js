@@ -33,7 +33,7 @@ function ShopContextProvider(props) {
 
     const addToCart = (itemid)=>{
         setCartItems((prev)=>({...prev,[itemid]:prev[itemid]+1}))
-        console.log(cartItems);
+        if(localStorage.getItem('auth_token'))
     }
     const removeFromCart = (itemid)=>{
         setCartItems((prev)=>({...prev,[itemid]:prev[itemid]-1}))
